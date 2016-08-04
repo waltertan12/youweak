@@ -1,0 +1,26 @@
+{
+  "name": "YouWeak",
+  "version": "1.0.0",
+  "description": "Slash command to remind people that they are weak",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "author": "Walter Tan <waltertan12@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waltertan12/"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "body-parser": "^1.15.1",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "express": "^4.13.4",
+    "mocha": "^2.5.3",
+    "morgan": "^1.7.0",
+    "redis": "^2.6.2",
+    "sqlite": "^2.2.0"
+  }
+}
