@@ -47,7 +47,7 @@ app.post('/weak', (req, res) => {
         username;
 
     switch (type) {
-        case Commands.doIEvenLift:
+        case Commands.dyel:
             return res.json({
                 response_type: 'in_channel',
                 text: '@' + req.body.user_name + ' :weary: http://i.imgur.com/TZp0r0v.jpg'
