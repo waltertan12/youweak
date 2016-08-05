@@ -50,7 +50,8 @@ app.post('/weak', (req, res) => {
         case Commands.pokefusion:
             return res.json({
                 response_type: 'in_channel',
-                text: 'Wow, an inspiring new pokemon ' + Utils.getPokeFusion(req.body.text)
+                text: 'Wow, an inspiring new pokemon that\'s probably stronger than you' + 
+                    Utils.getPokeFusion(req.body.text)
             });
 
         case Commands.dyel:
