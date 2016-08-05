@@ -4,5 +4,6 @@ module.exports = {
     dyel:       'dyel',
     inspire:    'inspire',
     addMattie:  'addMattie',
-    addPepe:    'addPepe'
+    addPepe:    'addPepe',
+    pokefusion: 'pokefusion'
 };

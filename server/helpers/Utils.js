@@ -2,6 +2,9 @@
 'use strict';
 
 const Commands = require('../constants/Commands');
+const Commands = require('../constants/Pokemon');
+const pokeFusionUrl = 'http://images.alexonsager.net/pokemon/fused/';
+const numberRegex = /\d+/;
 
 var Utils = {
     getCallType: (text) => {
@@ -45,6 +48,22 @@ var Utils = {
             randomIndex             = Utils.getNumberBetween(start, end);
 
         return mattieRogersVideoURLs[randomIndex];
+    },
+
+    getPokeFusion: (text) => {
+        var splitText = text.split(' '),
+            body = splitText[1],
+            head = splitText[2];
+
+        if (!numberRegex.exec(body)) {
+            body = Pokemon[body];
+        }
+
+        if (!numberRegex.exec(head)) {
+            head = Pokemon[head];
+        }
+
+        return pokeFusionUrl + body + '/' + body + '.' + head + '.png';
     }
 };
 
