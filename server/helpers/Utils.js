@@ -1,10 +1,10 @@
 /* globals require, module */
 'use strict';
 
-const Pokemon  = require('../constants/Commands');
-const Commands = require('../constants/Pokemon');
+const Commands      = require('../constants/Commands');
+const Pokemon       = require('../constants/Pokemon');
 const pokeFusionUrl = 'http://images.alexonsager.net/pokemon/fused/';
-const numberRegex = /\d+/;
+const numberRegex   = /\d+/;
 
 var Utils = {
     getCallType: (text) => {
@@ -61,6 +61,12 @@ var Utils = {
 
         if (!numberRegex.exec(head)) {
             head = Pokemon[head];
+        }
+
+        if (typeof body === 'undefined' || typeof head === 'undefined' ||
+            parseInt(head) > 151 || parseInt(head) < 1 ||
+            parseInt(body) > 151 || parseInt(body) < 1) {
+            throw 'Invalid pokemon';
         }
 
         return pokeFusionUrl + body + '/' + body + '.' + head + '.png';
