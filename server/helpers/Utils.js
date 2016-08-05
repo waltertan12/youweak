@@ -1,7 +1,7 @@
 /* globals require, module */
 'use strict';
 
-const Commands = require('../constants/Commands');
+const Pokemon  = require('../constants/Commands');
 const Commands = require('../constants/Pokemon');
 const pokeFusionUrl = 'http://images.alexonsager.net/pokemon/fused/';
 const numberRegex = /\d+/;
